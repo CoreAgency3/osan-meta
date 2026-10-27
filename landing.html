@@ -10,16 +10,15 @@
 <meta property="og:description" content="1,783세대 대단지 신축 선점 기회. 1분 상담 신청.">
 <meta name="robots" content="noindex">
 
-<!-- ===== 광고 추적 설정 (Meta 전용): index.html·landing.html 모두 같은 픽셀 ID로 바꾸세요 (바꾸기 전에는 자동으로 꺼져 있음) ===== -->
+<!-- ===== 광고 추적 설정(Meta): 메타 픽셀 ID(숫자)를 아래에 넣으세요. 넣기 전에는 자동으로 꺼져 있음 ===== -->
 <script>
 window.CFG = {
-  META_ID: '1752129255855940'   // 메타 픽셀 ID (숫자 15~16자리)
+  META_ID: '1752129255855940'          // 메타 픽셀 ID (숫자)
 };
 (function(){
   var c = window.CFG;
   if (c.META_ID.indexOf('X') < 0) {
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('set', 'autoConfig', false, c.META_ID);  /* 버튼 클릭 등 자동 수집 끄기: 직접 지정한 이벤트(PageView·Lead·Contact)만 전송 */
     fbq('init', c.META_ID); fbq('track', 'PageView');
   }
 })();
@@ -120,11 +119,11 @@ footer p+p{margin-top:8px}
     <span class="badge">분양 상담</span>
     <h1>오산헤리티지자이<br>병점역 신주거타운의 중심</h1>
     <ul class="points">
-      <li><b>GTX-C 병점역 연장 · 동탄트램</b> 교통 호재</li>
-      <li><b>삼성전자 화성·기흥캠퍼스</b> 종사자 약 14.5만 명 생활권</li>
+      <li><b>GTX-C 병점역 연장 · 동탄트램</b> 등 교통 계획(추진 중, 변경 가능)</li>
+      <li><b>삼성전자 화성·기흥캠퍼스</b> 종사자 약 14.5만 명(추정) 생활권</li>
       <li><b>1,783세대 대단지 신축</b>, 청약통장 없이 계약 가능</li>
     </ul>
-    <div class="price"><small>84㎡ 분양가</small><strong>7억 중후반대</strong></div>
+    <div class="price"><small>84㎡ 분양가</small><strong>7억대</strong></div>
     <p class="fine">※ 분양가는 층·타입에 따라 다르며 발코니 확장비 별도입니다. 교통 호재는 계획 단계로 변경·지연될 수 있습니다.</p>
     <a class="cta" href="#apply">1분 상담 신청하기</a>
   </header>
@@ -178,6 +177,8 @@ footer p+p{margin-top:8px}
               <li>수집 항목: 이름, 연락처, 관심 평형, 구매 목적</li>
               <li>이용 목적: 오산헤리티지자이 분양 상담 및 안내</li>
               <li>보유 기간: 상담 종료 후 6개월</li>
+              <li>처리 위탁·국외 이전: Make(Celonis s.r.o.), Slack(Slack Technologies, LLC) — 상담 접수·전달 목적</li>
+              <li>동의를 거부할 수 있으나, 거부 시 상담 신청이 제한됩니다.</li>
               <li>개인정보 보호책임자: 고영화 (자세한 내용은 개인정보 처리방침 참고)</li>
             </ul>
             <a class="policy" href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침 보기</a>
@@ -236,9 +237,8 @@ footer p+p{margin-top:8px}
   var formErr = document.getElementById('formErr');
   var params = new URLSearchParams(location.search);
 
-  /* 전화 버튼 클릭 → Meta 'Contact' 이벤트 (이름·번호 등 개인정보는 보내지 않음) */
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
-    a.addEventListener('click', function(){ try { if (window.fbq) fbq('track', 'Contact'); } catch(e){} });
+  document.getElementById('callBtn').addEventListener('click', function(){
+    try { if (window.fbq) fbq('track', 'Contact'); } catch(e){}
   });
 
   function radio(name){ var c = form.querySelector('input[name="'+name+'"]:checked'); return c ? c.value : ''; }
@@ -261,7 +261,7 @@ footer p+p{margin-top:8px}
     document.getElementById('formBox').style.display = 'none';
     document.getElementById('done').classList.add('on');
 
-    /* 전환 측정: 이름·전화번호는 광고 플랫폼으로 보내지 않음 (Meta 'Lead' 이벤트만 전송) */
+    /* 전환 측정: 이름·전화번호는 Meta로 보내지 않고, 신청 완료(Lead) 이벤트만 전송 */
     if (real) {
       try { if (window.fbq) window.fbq('track', 'Lead'); } catch(e){}
     }
@@ -301,12 +301,9 @@ footer p+p{margin-top:8px}
       size: data.size || '미선택',
       purpose: data.purpose || '미선택',
       consent: '동의',
-      channel: 'meta',
-      utm_source: params.get('utm_source') || 'meta',
-      utm_medium: params.get('utm_medium') || 'paid_social',
+      utm_source: params.get('utm_source') || '',
+      utm_medium: params.get('utm_medium') || '',
       utm_campaign: params.get('utm_campaign') || '',
-      utm_content: params.get('utm_content') || '',
-      utm_term: params.get('utm_term') || '',
       page: location.origin + location.pathname
     });
 
