@@ -147,34 +147,14 @@ footer p+p{margin-top:8px}
             <p class="err" id="phoneErr" role="alert"></p>
           </div>
 
-          <div class="field" role="radiogroup" aria-labelledby="sizeLbl">
-            <span class="lbl" id="sizeLbl">관심 평형 <span class="opt-tag">(선택)</span></span>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="size" value="75㎡"><span>75㎡</span></label>
-              <label class="chip"><input type="radio" name="size" value="84㎡"><span>84㎡</span></label>
-              <label class="chip"><input type="radio" name="size" value="102㎡"><span>102㎡</span></label>
-              <label class="chip"><input type="radio" name="size" value="124㎡"><span>124㎡</span></label>
-              <label class="chip"><input type="radio" name="size" value="166㎡ PH"><span>166㎡ PH</span></label>
-              <label class="chip"><input type="radio" name="size" value="미정"><span>미정</span></label>
-            </div>
-          </div>
 
-          <div class="field" role="radiogroup" aria-labelledby="purposeLbl">
-            <span class="lbl" id="purposeLbl">구매 목적 <span class="opt-tag">(선택)</span></span>
-            <div class="chips two">
-              <label class="chip"><input type="radio" name="purpose" value="실거주"><span>실거주</span></label>
-              <label class="chip"><input type="radio" name="purpose" value="투자"><span>투자</span></label>
-              <label class="chip"><input type="radio" name="purpose" value="실거주 + 투자"><span>실거주 + 투자</span></label>
-              <label class="chip"><input type="radio" name="purpose" value="아직 고민 중"><span>아직 고민 중</span></label>
-            </div>
-          </div>
 
           <div class="hp" aria-hidden="true"><label for="company">회사</label><input type="text" id="company" tabindex="-1" autocomplete="off"></div>
 
           <div class="consent">
             <label class="chk" for="agree"><input type="checkbox" id="agree"><span>[필수] 개인정보 수집·이용에 동의합니다.</span></label>
             <ul>
-              <li>수집 항목: 이름, 연락처, 관심 평형, 구매 목적</li>
+              <li>수집 항목: 이름, 연락처</li>
               <li>이용 목적: 오산헤리티지자이 분양 상담 및 안내</li>
               <li>보유 기간: 상담 종료 후 6개월</li>
               <li>처리 위탁·국외 이전: Make(Celonis s.r.o.), Slack(Slack Technologies, LLC) — 상담 접수·전달 목적</li>
@@ -198,8 +178,6 @@ footer p+p{margin-top:8px}
         <dl class="sum">
           <div><dt>이름</dt><dd id="d-name"></dd></div>
           <div><dt>연락처</dt><dd id="d-phone"></dd></div>
-          <div><dt>관심 평형</dt><dd id="d-size"></dd></div>
-          <div><dt>구매 목적</dt><dd id="d-purpose"></dd></div>
         </dl>
         <a class="btn call" href="tel:16887038">지금 전화 상담 1688-7038</a>
       </div>
@@ -256,8 +234,6 @@ footer p+p{margin-top:8px}
   function finish(data, real){
     document.getElementById('d-name').textContent = data.name;
     document.getElementById('d-phone').textContent = data.phone;
-    document.getElementById('d-size').textContent = data.size || '선택 안 함';
-    document.getElementById('d-purpose').textContent = data.purpose || '선택 안 함';
     document.getElementById('formBox').style.display = 'none';
     document.getElementById('done').classList.add('on');
 
@@ -285,7 +261,7 @@ footer p+p{margin-top:8px}
     if (!agree.checked) { agreeErr.textContent = '개인정보 수집·이용에 동의해 주세요.'; first = first || agree; }
     if (first) { first.focus(); return; }
 
-    var data = { name: name, phone: phoneEl.value, size: radio('size'), purpose: radio('purpose') };
+    var data = { name: name, phone: phoneEl.value, size: '', purpose: '' };
 
     /* 스팸 봇이 숨은 칸을 채웠으면 전송·전환 기록 없이 완료 화면만 보여줌 */
     if (document.getElementById('company').value) { finish(data, false); return; }
@@ -298,8 +274,8 @@ footer p+p{margin-top:8px}
     var body = new URLSearchParams({
       name: data.name,
       phone: data.phone,
-      size: data.size || '미선택',
-      purpose: data.purpose || '미선택',
+      size: '-',
+      purpose: '-',
       consent: '동의',
       utm_source: params.get('utm_source') || '',
       utm_medium: params.get('utm_medium') || '',
