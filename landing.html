@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>오산헤리티지자이 분양 상담 신청 | 코어에이전시</title>
-<meta name="description" content="오산헤리티지자이 1,783세대 대단지 신축. 이름과 연락처만 남기시면 상담사가 직접 연락드립니다.">
+<title>오산헤리티지자이 분양가표·평면도 | 코어에이전시</title>
+<meta name="description" content="오산헤리티지자이 1,783세대 대단지 신축. 이름과 번호만 남기면 분양가표·평면도를 문자로 보내드립니다.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="오산헤리티지자이 | 병점역 신주거타운의 중심">
 <meta property="og:description" content="1,783세대 대단지 신축 선점 기회. 1분 상담 신청.">
@@ -109,6 +109,16 @@ footer p+p{margin-top:8px}
 .dock .tel{background:var(--gold);color:var(--navy)}
 .dock .apply-btn{background:var(--navy);color:#fff}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.heroline{margin-top:10px;font-size:15px;opacity:.95}.heroline b{color:var(--gold)}
+.hero{padding-bottom:22px}
+.apply{padding-top:22px}
+.cd{margin-top:8px}.cd summary{cursor:pointer;font-size:13.5px;font-weight:700;color:var(--navy2);min-height:32px;display:flex;align-items:center}
+.info{margin:22px 20px 0;background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;border-radius:20px;padding:22px 18px 20px}
+.info h3{font-size:19px;font-weight:800}
+.info .points{margin-top:14px}
+.info .fine{color:rgba(255,255,255,.72)}
+.info .cta{margin-top:12px;min-height:54px}
+.info .tel2{margin-top:10px}
 </style>
 </head>
 <body>
@@ -116,23 +126,16 @@ footer p+p{margin-top:8px}
 
   <header class="hero">
     <p class="brand">오산헤리티지자이 · GS건설 자이</p>
-    <span class="badge">분양 상담</span>
+    <span class="badge">분양가표·평면도 무료</span>
     <h1>오산헤리티지자이<br>병점역 신주거타운의 중심</h1>
-    <ul class="points">
-      <li><b>GTX-C 병점역 연장 · 동탄트램</b> 등 교통 계획(추진 중, 변경 가능)</li>
-      <li><b>삼성전자 화성·기흥캠퍼스</b> 종사자 약 14.5만 명(추정) 생활권</li>
-      <li><b>1,783세대 대단지 신축</b>, 청약통장 없이 계약 가능</li>
-    </ul>
-    <div class="price"><small>84㎡ 분양가</small><strong>7억대</strong></div>
-    <p class="fine">※ 분양가는 층·타입에 따라 다르며 발코니 확장비 별도입니다. 교통 호재는 계획 단계로 변경·지연될 수 있습니다.</p>
-    <a class="cta" href="#apply">1분 상담 신청하기</a>
+    <p class="heroline">1,783세대 대단지 · 84㎡ 분양가 <b>7억대</b></p>
   </header>
 
   <main>
     <section class="apply" id="apply">
       <div id="formBox">
-        <h2>상담 신청</h2>
-        <p class="sub">이름과 연락처만 남기시면 상담사가 직접 연락드립니다. 상담은 무료입니다.</p>
+        <h2>84㎡ 분양가표·평면도 무료 받기</h2>
+        <p class="sub">이름과 번호만 남기면 문자로 보내드려요. 상담은 원하실 때만.</p>
 
         <form id="leadForm" novalidate>
           <div class="field">
@@ -153,28 +156,29 @@ footer p+p{margin-top:8px}
 
           <div class="consent">
             <label class="chk" for="agree"><input type="checkbox" id="agree"><span>[필수] 개인정보 수집·이용에 동의합니다.</span></label>
+            <details class="cd"><summary>내용 보기</summary>
             <ul>
               <li>수집 항목: 이름, 연락처</li>
-              <li>이용 목적: 오산헤리티지자이 분양 상담 및 안내</li>
+              <li>이용 목적: 분양가표·평면도 문자 발송 및 분양 상담 안내</li>
               <li>보유 기간: 상담 종료 후 6개월</li>
               <li>처리 위탁·국외 이전: Make(Celonis s.r.o.), Slack(Slack Technologies, LLC) — 상담 접수·전달 목적</li>
               <li>동의를 거부할 수 있으나, 거부 시 상담 신청이 제한됩니다.</li>
               <li>개인정보 보호책임자: 고영화 (자세한 내용은 개인정보 처리방침 참고)</li>
             </ul>
             <a class="policy" href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침 보기</a>
+            </details>
             <p class="err" id="agreeErr" role="alert"></p>
           </div>
 
           <p class="formerr" id="formErr" role="alert"></p>
-          <button type="submit" class="btn go" id="submit">무료 상담 신청하기</button>
-          <a class="btn call" href="tel:16887038">바로 전화하기 1688-7038</a>
+          <button type="submit" class="btn go" id="submit">무료로 자료 받기</button>
         </form>
       </div>
 
       <div class="done" id="done" aria-live="polite">
         <div class="check" aria-hidden="true"></div>
-        <h2 id="doneTitle" tabindex="-1">신청이 접수되었습니다</h2>
-        <p class="sub">확인 후 남겨주신 번호로 연락드립니다.<br>바로 상담을 원하시면 지금 전화해 주세요.</p>
+        <h2 id="doneTitle" tabindex="-1">자료 요청이 접수되었습니다</h2>
+        <p class="sub">확인 후 남겨주신 번호로 문자를 보내드립니다.<br>바로 상담을 원하시면 지금 전화해 주세요.</p>
         <dl class="sum">
           <div><dt>이름</dt><dd id="d-name"></dd></div>
           <div><dt>연락처</dt><dd id="d-phone"></dd></div>
@@ -183,10 +187,23 @@ footer p+p{margin-top:8px}
       </div>
     </section>
 
+    <section class="info" aria-label="핵심 정보">
+      <h3>오산헤리티지자이 핵심 정보</h3>
+      <ul class="points">
+        <li><b>GTX-C 병점역 연장 · 동탄트램</b> 교통 호재(추진 중, 변경 가능)</li>
+        <li><b>삼성전자 화성·기흥캠퍼스</b> 종사자 약 14.5만 명(추정) 생활권</li>
+        <li><b>1,783세대 대단지 신축</b>, 청약통장 없이 계약 가능</li>
+      </ul>
+      <div class="price"><small>84㎡ 분양가</small><strong>7억대</strong></div>
+      <p class="fine">※ 분양가는 층·타입에 따라 다르며 발코니 확장비 별도입니다. 교통 호재는 계획 단계로 변경·지연될 수 있습니다.</p>
+      <a class="cta" href="#apply">분양가표·평면도 받기</a>
+      <a class="cta tel2" href="tel:16887038" id="callBtn2">바로 전화하기 1688-7038</a>
+    </section>
+
     <div class="trust">
-      <div><b>무료</b>상담 비용 없음</div>
+      <div><b>무료</b>자료 비용 없음</div>
       <div><b>1분</b>신청 소요 시간</div>
-      <div><b>1:1</b>상담사 직접 연락</div>
+      <div><b>문자</b>자료 바로 발송</div>
     </div>
     <a class="more" href="index.html">단지 정보 자세히 보기 →</a>
   </main>
@@ -199,7 +216,7 @@ footer p+p{margin-top:8px}
 
 <nav class="dock" aria-label="상담 바로가기">
   <a class="tel" id="callBtn" href="tel:16887038">전화</a>
-  <a class="apply-btn" href="#apply">상담 신청</a>
+  <a class="apply-btn" href="#apply">자료 받기</a>
 </nav>
 
 <script>
@@ -215,9 +232,7 @@ footer p+p{margin-top:8px}
   var formErr = document.getElementById('formErr');
   var params = new URLSearchParams(location.search);
 
-  document.getElementById('callBtn').addEventListener('click', function(){
-    try { if (window.fbq) fbq('track', 'Contact'); } catch(e){}
-  });
+  ['callBtn','callBtn2'].forEach(function(id){ var el=document.getElementById(id); if(el) el.addEventListener('click', function(){ try { if (window.fbq) fbq('track', 'Contact'); } catch(e){} }); });
 
   function radio(name){ var c = form.querySelector('input[name="'+name+'"]:checked'); return c ? c.value : ''; }
   function showError(html){ formErr.innerHTML = html; formErr.classList.add('on'); }
@@ -275,7 +290,7 @@ footer p+p{margin-top:8px}
       name: data.name,
       phone: data.phone,
       size: '-',
-      purpose: '-',
+      purpose: '분양가표·평면도 문자 요청',
       consent: '동의',
       utm_source: params.get('utm_source') || '',
       utm_medium: params.get('utm_medium') || '',
