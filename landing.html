@@ -3,23 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>오산헤리티지자이 분양가표·평면도 | 코어에이전시</title>
-<meta name="description" content="오산헤리티지자이 1,783세대 대단지 신축. 이름과 번호만 남기면 분양가표·평면도를 문자로 보내드립니다.">
+<title>오산헤리티지자이 분양가표·평면도 받기 | 코어에이전시</title>
+<meta name="description" content="오산헤리티지자이 1,783세대 대단지 신축. 이름과 연락처만 남기시면 84㎡ 분양가표와 평면도를 문자로 보내드립니다.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="오산헤리티지자이 | 병점역 신주거타운의 중심">
-<meta property="og:description" content="1,783세대 대단지 신축 선점 기회. 1분 상담 신청.">
+<meta property="og:description" content="1,783세대 대단지 신축. 분양가표·평면도 무료로 받기.">
 <meta name="robots" content="noindex">
 
-<!-- ===== 광고 추적 설정(Meta): 메타 픽셀 ID(숫자)를 아래에 넣으세요. 넣기 전에는 자동으로 꺼져 있음 ===== -->
+<!-- ===== 광고 추적 설정: 아래 값만 본인 값으로 바꾸세요 (바꾸기 전에는 자동으로 꺼져 있음) ===== -->
 <script>
 window.CFG = {
-  META_ID: '1752129255855940'          // 메타 픽셀 ID (숫자)
+  AW_ID:   'AW-18521422229',            // 구글애즈 태그 ID
+  AW_LEAD: 'AW-18521422229/8N7JCIrPsKUdEJXz2f9E', // 상담신청 전환 (전환 이벤트 스니펫의 send_to 값)
+  AW_CALL: 'AW-18521422229/dx6FCOfbsKUdEJXz2f9E', // 전화클릭 전환 (전화클릭 이벤트 스니펫의 send_to 값)
+  META_ID: 'XXXXXXXXXXXXXXX',         // 메타 픽셀 ID (숫자)
+  CLARITY_ID: 'z5mweutce8'            // Microsoft Clarity 프로젝트 ID
 };
 (function(){
   var c = window.CFG;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  if (c.AW_ID.indexOf('X') < 0) {
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + c.AW_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', c.AW_ID);
+  }
   if (c.META_ID.indexOf('X') < 0) {
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', c.META_ID); fbq('track', 'PageView');
+  }
+  if (c.CLARITY_ID && c.CLARITY_ID.indexOf('XXXX') < 0) {
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script',c.CLARITY_ID);
   }
 })();
 </script>
@@ -34,10 +49,32 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .app{max-width:520px;margin:0 auto;background:#fff;box-shadow:0 0 0 1px var(--line)}
 
-.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:calc(26px + env(safe-area-inset-top,0px)) 20px 36px}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:calc(12px + env(safe-area-inset-top,0px)) 20px 16px;cursor:pointer}
+.mini{margin-top:10px;font-size:15px;opacity:.92}.mini b{color:var(--gold)}
+.perk{margin-top:12px;background:linear-gradient(135deg,#e2c27a,#c8a45c);color:var(--navy);border-radius:14px;padding:10px 14px 11px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.25);animation:glow 2.4s ease-in-out infinite}
+.perk-k{font-size:13px;font-weight:800;letter-spacing:.02em}
+.perk-big{font-size:clamp(25px,7.6vw,31px);font-weight:900;line-height:1.2;letter-spacing:-.02em}
+.perk-big em{font-style:normal;color:#b3261e}
+.perk-sub{font-size:14.5px;font-weight:700;margin-top:3px;padding-top:5px;border-top:1px dashed rgba(11,31,58,.35)}
+.perk-sub b{font-weight:900}
+@keyframes glow{0%,100%{box-shadow:0 4px 14px rgba(0,0,0,.25)}50%{box-shadow:0 0 0 3px rgba(255,255,255,.55),0 4px 18px rgba(200,164,92,.7)}}
+.benefit{margin:26px 20px 0;border-radius:16px;overflow:hidden;background:#111;color:#fff}
+.benefit img{display:block;width:100%;height:auto}
+.bnf-body{padding:20px 18px 22px;text-align:center}
+.bnf-eye{font-size:12px;letter-spacing:.2em;color:var(--gold)}
+.benefit h2{color:#fff;font-size:22px;margin-top:2px}
+.benefit ul{list-style:none;margin:14px 0 0}
+.benefit li{font-size:16px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.benefit li span{display:inline-block;font-size:12px;background:var(--gold);color:var(--navy);border-radius:6px;padding:1px 7px;margin-right:6px;font-weight:700;vertical-align:1px}
+.benefit li b{color:var(--gold)}
+.bnf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.bnf-grid div{border:1px solid rgba(200,164,92,.6);border-radius:12px;padding:10px 6px}
+.bnf-grid small{display:block;font-size:12.5px;opacity:.85}.bnf-grid b{font-size:22px;color:var(--gold)}
+.bnf-fine{font-size:11.5px;opacity:.65;margin-top:10px}
+.benefit .btn.go{background:var(--gold);color:var(--navy)}
 .brand{font-size:13px;opacity:.85}
-.badge{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--navy);background:var(--gold);border-radius:999px;padding:4px 12px}
-h1{font-size:clamp(28px,8.4vw,36px);line-height:1.3;font-weight:800;letter-spacing:-.02em;margin-top:12px}
+.badge{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--navy);background:var(--gold);border-radius:999px;padding:4px 12px}
+h1{font-size:clamp(23px,6.6vw,30px);line-height:1.3;font-weight:800;letter-spacing:-.02em;margin-top:12px}
 .points{list-style:none;margin-top:20px;display:grid;gap:10px}
 .points li{position:relative;padding-left:30px;font-size:15.5px;line-height:1.5}
 .points li::before{content:"";position:absolute;left:2px;top:4px;width:16px;height:9px;border-left:3px solid var(--gold);border-bottom:3px solid var(--gold);transform:rotate(-45deg)}
@@ -49,14 +86,20 @@ h1{font-size:clamp(28px,8.4vw,36px);line-height:1.3;font-weight:800;letter-spaci
 .hero .fine{color:rgba(255,255,255,.72);margin-top:12px}
 .cta{display:flex;align-items:center;justify-content:center;min-height:58px;margin-top:20px;border-radius:14px;background:var(--gold);color:var(--navy);font-weight:800;font-size:18px;text-decoration:none}
 
-.apply{padding:34px 20px 8px}
+.apply{padding:12px 20px 8px}
+.info{margin:26px 20px 0;padding:22px 18px;border-radius:16px;background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff}
+.info h2{color:#fff;font-size:20px}
+.info .fine{color:rgba(255,255,255,.72)}
+.info .btn.go{background:var(--gold);color:var(--navy)}
+.consent details{margin-top:8px}
+.consent summary{cursor:pointer;font-size:13.5px;color:var(--navy2);font-weight:700;padding:6px 0}
 h2{font-size:clamp(22px,6.4vw,27px);line-height:1.3;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
-.sub{color:var(--mute);font-size:15px;margin:6px 0 22px}
-.field{margin-bottom:18px}
-.field > label,.field > .lbl{display:block;font-weight:700;font-size:15px;margin-bottom:7px}
+.sub{color:var(--mute);font-size:14.5px;margin:4px 0 10px}
+.field{margin-bottom:9px}
+.field > label,.field > .lbl{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
 .req{color:var(--red)}
 .opt-tag{font-weight:400;color:var(--mute);font-size:13px}
-input[type=text],input[type=tel]{width:100%;min-height:56px;padding:0 16px;border:2px solid var(--line);border-radius:14px;font:inherit;font-size:18px;background:#fff;color:var(--ink)}
+input[type=text],input[type=tel]{width:100%;min-height:48px;padding:0 16px;border:2px solid var(--line);border-radius:14px;font:inherit;font-size:18px;background:#fff;color:var(--ink)}
 input[type=text]:focus,input[type=tel]:focus{border-color:var(--navy2);outline:0;box-shadow:0 0 0 3px rgba(19,48,90,.18)}
 input.bad{border-color:var(--red)}
 .err{color:var(--red);font-size:14px;margin-top:6px}
@@ -70,7 +113,7 @@ input.bad{border-color:var(--red)}
 .chip input:checked + span{border-color:var(--navy2);background:#eaf0f9;color:var(--navy2)}
 .chip input:focus-visible + span{outline:3px solid var(--gold);outline-offset:2px}
 
-.consent{background:var(--bg);border-radius:14px;padding:16px;margin-top:4px}
+.consent{background:var(--bg);border-radius:14px;padding:12px 14px;margin-top:2px}
 .consent .chk{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-weight:700;font-size:15.5px}
 .consent .chk input{flex:none;width:24px;height:24px;margin-top:1px;accent-color:var(--navy2)}
 .consent ul{margin:12px 0 0 2px;padding-left:18px;font-size:13.5px;color:var(--mute);line-height:1.6}
@@ -80,7 +123,7 @@ input.bad{border-color:var(--red)}
 .formerr a{font-weight:700}
 
 .btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:60px;border-radius:14px;font-weight:800;font-size:18px;text-decoration:none;text-align:center}
-.btn.go{background:var(--navy);color:#fff;margin-top:18px}
+.btn.go{background:var(--navy);color:#fff;margin-top:12px}
 .btn.go[disabled]{opacity:.55;cursor:wait}
 .btn.call{background:var(--gold);color:var(--navy);margin-top:12px}
 
@@ -108,41 +151,16 @@ footer p+p{margin-top:8px}
 .dock a{flex:1;max-width:250px;min-height:50px;display:flex;align-items:center;justify-content:center;border-radius:12px;font-weight:800;font-size:16px;text-decoration:none}
 .dock .tel{background:var(--gold);color:var(--navy)}
 .dock .apply-btn{background:var(--navy);color:#fff}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.heroline{margin-top:10px;font-size:15px;opacity:.95}.heroline b{color:var(--gold)}
-.hero{padding-bottom:22px}
-.apply{padding-top:22px}
-.cd{margin-top:8px}.cd summary{cursor:pointer;font-size:13.5px;font-weight:700;color:var(--navy2);min-height:32px;display:flex;align-items:center}
-.info{margin:22px 20px 0;background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;border-radius:20px;padding:22px 18px 20px}
-.info h3{font-size:19px;font-weight:800}
-.info .points{margin-top:14px}
-.info .fine{color:rgba(255,255,255,.72)}
-.info .cta{margin-top:12px;min-height:54px}
-.info .tel2{margin-top:10px}
-.perk{margin-top:16px;background:#fff;border-radius:16px;padding:14px 12px 12px;color:var(--navy);box-shadow:0 0 0 2px var(--gold)}
-.perk-h{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:800;color:var(--red);margin:0 2px 10px}
-.perk-g{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.perk-g div{background:var(--bg);border-radius:12px;padding:10px 10px 9px;line-height:1.3}
-.perk-g small{display:block;font-size:12.5px;color:var(--mute);font-weight:700}
-.perk-g b{display:block;margin-top:3px;font-size:clamp(17px,5vw,20px);font-weight:800;color:var(--navy);letter-spacing:-.02em}
-.perk-g b em{font-style:normal;color:var(--red)}
-.perk-n{font-size:11.5px;color:var(--mute);margin:9px 2px 0;line-height:1.5}
-.perks{list-style:none;margin-top:14px;display:grid;gap:6px;font-size:15px}
-.perks li b{color:var(--gold)}
-.kb{position:relative;overflow:hidden;background:#120d0a;color:#fff}
-.kb img{display:block;width:100%;height:auto}
-.kb-top{position:absolute;left:0;right:0;top:0;padding:22px 20px 60px;text-align:center;background:linear-gradient(180deg,rgba(8,10,20,.82) 0%,rgba(8,10,20,.55) 62%,rgba(8,10,20,0) 100%)}
-.kb-eb{font-size:11px;letter-spacing:.32em;color:var(--gold);font-weight:700}
-.kb-t1{font-family:'Nanum Myeongjo','Noto Serif KR',serif;font-size:clamp(22px,6.4vw,28px);font-weight:800;color:#f3e2b8;margin-top:4px}
-.kb-t2{display:inline-block;margin-top:10px;font-size:15px;font-weight:800;color:var(--navy);background:linear-gradient(90deg,#e9cf8f,#c8a45c);border-radius:999px;padding:3px 14px}
-.kb-big{margin-top:8px;font-size:clamp(25px,7.4vw,32px);line-height:1.22;font-weight:900;letter-spacing:-.03em;text-shadow:0 2px 10px rgba(0,0,0,.6)}
-.kb-big em{font-style:normal;font-size:1.45em;background:linear-gradient(180deg,#fffbea,#f6dc95 50%,#d3a550);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5))}
-.kb-wine{display:inline-block;margin-top:12px;font-size:15px;font-weight:700;background:rgba(0,0,0,.45);border:1px solid rgba(200,164,92,.6);border-radius:12px;padding:6px 12px}
-.kb-wine b{color:#f3d58c}
-.kb-bot{position:absolute;left:12px;right:12px;bottom:34px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.kb-bot span{background:rgba(11,31,58,.88);border:1px solid rgba(200,164,92,.7);border-radius:12px;padding:9px 6px;text-align:center;font-size:14px;font-weight:700;line-height:1.3}
-.kb-bot b{display:block;font-size:clamp(19px,5.6vw,23px);color:#f3d58c;font-weight:900}
-.kb-n{position:absolute;left:0;right:0;bottom:0;padding:7px 12px;font-size:10.5px;line-height:1.4;color:rgba(255,255,255,.75);background:rgba(0,0,0,.55);text-align:center}
+.sheet{position:fixed;inset:0;z-index:50;background:rgba(11,31,58,.55);display:none;align-items:flex-end;justify-content:center}
+.sheet.on{display:flex}
+.sheet-box{width:100%;max-width:520px;background:#fff;border-radius:18px 18px 0 0;padding:22px 20px calc(18px + env(safe-area-inset-bottom,0px));text-align:center}
+.sheet-t{font-weight:800;font-size:18px;color:var(--navy)}
+.sheet-n{font-size:28px;font-weight:800;color:var(--navy2);margin-top:6px}
+.sheet-s{font-size:13.5px;color:var(--mute);margin-top:2px}
+.sheet-box .btn.call{margin-top:16px}
+.sheet-x{display:block;width:100%;min-height:52px;margin-top:8px;font-weight:700;color:var(--mute);font-size:16px}
+.dock{transition:transform .2s}.dock.off{transform:translateY(110%)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.perk{animation:none}}
 </style>
 </head>
 <body>
@@ -152,29 +170,18 @@ footer p+p{margin-top:8px}
     <p class="brand">오산헤리티지자이 · GS건설 자이</p>
     <span class="badge">분양가표·평면도 무료</span>
     <h1>오산헤리티지자이<br>병점역 신주거타운의 중심</h1>
-    <p class="heroline">1,783세대 대단지 · 84㎡ 분양가 <b>7억대</b></p>
+    <p class="mini">1,783세대 대단지 · 84㎡ 분양가 <b>7억 중후반대</b></p>
+    <div class="perk">
+      <p class="perk-k">🎁 계약 시 특별 혜택</p>
+      <p class="perk-big">신세계 상품권 <em>100만원</em></p>
+      <p class="perk-sub">🍷 모델하우스 방문 예약만 해도 <b>고급 와인</b> 증정</p>
+    </div>
   </header>
-
-  <section class="kb" aria-label="계약 특별 혜택">
-    <img src="perk_key.webp" width="900" height="1289" alt="">
-    <div class="kb-top">
-      <p class="kb-eb">SPECIAL BENEFIT</p>
-      <p class="kb-t1">특별한 혜택</p>
-      <p class="kb-t2">계약 시</p>
-      <p class="kb-big">신세계 상품권<br><em>100만원</em> 증정</p>
-      <p class="kb-wine">🍷 모델하우스 예약 방문 시 <b>고급 와인 증정</b></p>
-    </div>
-    <div class="kb-bot">
-      <span>계약금<b>5%</b></span>
-      <span>1차 계약금<b>500만원</b></span>
-    </div>
-    <p class="kb-n">※ 혜택은 분양 조건·수량에 따라 변경 또는 조기 종료될 수 있습니다 · 연출 이미지</p>
-  </section>
 
   <main>
     <section class="apply" id="apply">
       <div id="formBox">
-        <h2>84㎡ 분양가표·평면도 무료 받기</h2>
+        <h2 style="font-size:22px">84㎡ 분양가표·평면도 무료 받기</h2>
         <p class="sub">이름과 번호만 남기면 문자로 보내드려요. 방문 예약하시면 <b style="color:var(--red)">고급 와인</b>을 드립니다.</p>
 
         <form id="leadForm" novalidate>
@@ -190,22 +197,19 @@ footer p+p{margin-top:8px}
             <p class="err" id="phoneErr" role="alert"></p>
           </div>
 
-
-
           <div class="hp" aria-hidden="true"><label for="company">회사</label><input type="text" id="company" tabindex="-1" autocomplete="off"></div>
 
           <div class="consent">
             <label class="chk" for="agree"><input type="checkbox" id="agree"><span>[필수] 개인정보 수집·이용에 동의합니다.</span></label>
-            <details class="cd"><summary>내용 보기</summary>
-            <ul>
-              <li>수집 항목: 이름, 연락처</li>
-              <li>이용 목적: 분양가표·평면도 문자 발송 및 분양 상담 안내</li>
-              <li>보유 기간: 상담 종료 후 6개월</li>
-              <li>처리 위탁·국외 이전: Make(Celonis s.r.o.), Slack(Slack Technologies, LLC) — 상담 접수·전달 목적</li>
-              <li>동의를 거부할 수 있으나, 거부 시 상담 신청이 제한됩니다.</li>
-              <li>개인정보 보호책임자: 고영화 (자세한 내용은 개인정보 처리방침 참고)</li>
-            </ul>
-            <a class="policy" href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침 보기</a>
+            <details>
+              <summary>내용 보기</summary>
+              <ul>
+                <li>수집 항목: 이름, 연락처</li>
+                <li>이용 목적: 오산헤리티지자이 분양 자료(분양가표·평면도 등) 발송, 분양 상담 및 안내</li>
+                <li>보유 기간: 상담 종료 후 6개월</li>
+                <li>개인정보 보호책임자: 고영화</li>
+              </ul>
+              <a class="policy" href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침 보기</a>
             </details>
             <p class="err" id="agreeErr" role="alert"></p>
           </div>
@@ -217,32 +221,44 @@ footer p+p{margin-top:8px}
 
       <div class="done" id="done" aria-live="polite">
         <div class="check" aria-hidden="true"></div>
-        <h2 id="doneTitle" tabindex="-1">자료 요청이 접수되었습니다</h2>
-        <p class="sub">확인 후 남겨주신 번호로 문자를 보내드립니다.<br>바로 상담을 원하시면 지금 전화해 주세요.</p>
+        <h2 id="doneTitle" tabindex="-1">요청이 접수되었습니다</h2>
+        <p class="sub">남겨주신 번호로 분양가표와 평면도를 문자로 보내드립니다.<br>궁금한 점은 언제든 전화로 물어보세요.</p>
         <dl class="sum">
           <div><dt>이름</dt><dd id="d-name"></dd></div>
           <div><dt>연락처</dt><dd id="d-phone"></dd></div>
+          <div hidden><dt>관심 평형</dt><dd id="d-size"></dd></div>
+          <div hidden><dt>구매 목적</dt><dd id="d-purpose"></dd></div>
         </dl>
-        <a class="btn call" href="tel:16887038">지금 전화 상담 1688-7038</a>
+        <a class="btn call" href="tel:+8216887038">지금 전화 상담 1688-7038</a>
       </div>
     </section>
 
-    <section class="info" aria-label="핵심 정보">
-      <h3>오산헤리티지자이 핵심 정보</h3>
+    <section class="benefit">
+      <img src="perk_key.webp" alt="" loading="lazy">
+      <div class="bnf-body">
+        <p class="bnf-eye">SPECIAL BENEFIT</p>
+        <h2>특별한 혜택</h2>
+        <ul>
+          <li><span>계약 시</span><b>신세계 상품권 100만원</b> 증정</li>
+          <li><span>방문 예약 시</span><b>고급 와인</b> 증정</li>
+        </ul>
+        <div class="bnf-grid"><div><small>계약금</small><b>5%</b></div><div><small>1차 계약금</small><b>500만원</b></div></div>
+        <p class="bnf-fine">※ 혜택은 분양 조건·수량에 따라 변경 또는 조기 종료될 수 있습니다. 연출 이미지</p>
+        <a class="btn go" href="#apply" data-focus>혜택 안내 받기</a>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>오산헤리티지자이 핵심 정보</h2>
       <ul class="points">
-        <li><b>GTX-C 병점역 연장 · 동탄트램</b> 교통 호재(추진 중, 변경 가능)</li>
-        <li><b>삼성전자 화성·기흥캠퍼스</b> 종사자 약 14.5만 명(추정) 생활권</li>
+        <li><b>GTX-C 병점역 연장 · 동탄트램</b> 교통 호재</li>
+        <li><b>삼성전자 화성·기흥캠퍼스</b> 종사자 약 14.5만 명 생활권</li>
         <li><b>1,783세대 대단지 신축</b>, 청약통장 없이 계약 가능</li>
       </ul>
-      <div class="price"><small>84㎡ 분양가</small><strong>7억대</strong></div>
-      <ul class="perks">
-        <li>✔ <b>계약금 5%</b> · 1차 계약금 <b>500만원</b></li>
-        <li>✔ 모델하우스 <b>예약 방문 시 고급 와인 증정</b></li>
-        <li>✔ 계약 시 <b>신세계 상품권 100만원 증정</b></li>
-      </ul>
+      <div class="price"><small>84㎡ 분양가</small><strong>7억 중후반대</strong></div>
       <p class="fine">※ 분양가는 층·타입에 따라 다르며 발코니 확장비 별도입니다. 교통 호재는 계획 단계로 변경·지연될 수 있습니다.</p>
-      <a class="cta" href="#apply">분양가표·평면도 받기</a>
-      <a class="cta tel2" href="tel:16887038" id="callBtn2">바로 전화하기 1688-7038</a>
+      <a class="btn go" href="#apply" data-focus>분양가표·평면도 받기</a>
+      <a class="btn call" href="tel:+8216887038">바로 전화하기 1688-7038</a>
     </section>
 
     <div class="trust">
@@ -254,14 +270,24 @@ footer p+p{margin-top:8px}
   </main>
 
   <footer>
-    <p><strong style="color:var(--navy)">코어에이전시</strong> · 상담전화 <a href="tel:16887038">1688-7038</a> · 개인정보 보호책임자 고영화 · <a href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침</a></p>
+    <p><strong style="color:var(--navy)">코어에이전시</strong> · 상담전화 <a href="tel:+8216887038">1688-7038</a> · 개인정보 보호책임자 고영화 · <a href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침</a></p>
     <p>본 페이지는 분양 상담사가 운영하는 안내 페이지로, 시행사·시공사의 공식 홈페이지가 아닙니다. 사업명: 오산 양산4 도시개발구역 1·2BL 공동주택 신축사업 / 대지위치: 경기도 오산시 양산동 223번지·328-2번지 일원. 표기된 내용은 이해를 돕기 위한 것으로 실제와 다를 수 있으며, 계획 사항은 변경될 수 있습니다. 정확한 내용은 입주자 모집공고 및 분양계약서를 기준으로 합니다.</p>
   </footer>
 </div>
 
+<div class="sheet" id="callSheet" role="dialog" aria-modal="true" aria-labelledby="callTitle">
+  <div class="sheet-box">
+    <p class="sheet-t" id="callTitle">상담 전화로 연결할까요?</p>
+    <p class="sheet-n">1688-7038</p>
+    <p class="sheet-s">코어에이전시 분양 상담 (07:00~23:00)</p>
+    <a class="btn call" id="callGo" href="tel:+8216887038">전화하기</a>
+    <button type="button" class="sheet-x" id="callCancel">취소</button>
+  </div>
+</div>
+
 <nav class="dock" aria-label="상담 바로가기">
-  <a class="tel" id="callBtn" href="tel:16887038">전화</a>
-  <a class="apply-btn" href="#apply">자료 받기</a>
+  <a class="tel" id="callBtn" href="tel:+8216887038">전화 상담</a>
+  <a class="apply-btn" href="#apply" data-focus>자료 받기</a>
 </nav>
 
 <script>
@@ -277,7 +303,53 @@ footer p+p{margin-top:8px}
   var formErr = document.getElementById('formErr');
   var params = new URLSearchParams(location.search);
 
-  ['callBtn','callBtn2'].forEach(function(id){ var el=document.getElementById(id); if(el) el.addEventListener('click', function(){ try { if (window.fbq) fbq('track', 'Contact'); } catch(e){} }); });
+  /* 전화 버튼: 확인 창 → [전화하기]를 누를 때만 전환 기록 + 슬랙 알림 */
+  var sheet = document.getElementById('callSheet');
+  function openSheet(){ sheet.classList.add('on'); document.getElementById('callGo').focus(); }
+  function closeSheet(){ sheet.classList.remove('on'); }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+    if (!a || a.id === 'callGo') return;
+    e.preventDefault(); openSheet();
+  });
+  document.getElementById('callCancel').addEventListener('click', closeSheet);
+  sheet.addEventListener('click', function(e){ if (e.target === sheet) closeSheet(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeSheet(); });
+  document.getElementById('callGo').addEventListener('click', function(){
+    try {
+      var c = window.CFG || {};
+      if (typeof window.gtag === 'function' && c.AW_CALL && c.AW_CALL.indexOf('YYYY') < 0 && c.AW_ID.indexOf('X') < 0) {
+        window.gtag('event', 'conversion', { 'send_to': c.AW_CALL });
+      }
+      if (window.fbq) fbq('track', 'Contact');
+      if (ENDPOINT) {
+        var b = new URLSearchParams({
+          name: '(전화 연결 시도)', phone: '-', size: '-', purpose: '전화 버튼', consent: '-',
+          utm_source: params.get('utm_source') || '', utm_medium: params.get('utm_medium') || '',
+          utm_campaign: params.get('utm_campaign') || '', page: location.origin + location.pathname
+        });
+        if (navigator.sendBeacon) navigator.sendBeacon(ENDPOINT, b);
+        else fetch(ENDPOINT, { method:'POST', mode:'no-cors', body:b, keepalive:true });
+      }
+    } catch(x){}
+    setTimeout(closeSheet, 300);
+  });
+
+  function goForm(e){
+    if (e) e.preventDefault();
+    var box = document.getElementById('formBox');
+    if (box.style.display === 'none') { document.getElementById('apply').scrollIntoView(); return; }
+    document.getElementById('apply').scrollIntoView({behavior:'smooth'});
+    setTimeout(function(){ try{ nameEl.focus({preventScroll:true}); }catch(x){ nameEl.focus(); } }, 350);
+  }
+  document.querySelector('.hero').addEventListener('click', goForm);
+  /* 신청서가 화면에 보이는 동안 하단 고정 버튼을 숨겨 제출 버튼이 가려지지 않게 함 */
+  if ('IntersectionObserver' in window) {
+    var dock = document.querySelector('.dock');
+    new IntersectionObserver(function(es){ dock.classList.toggle('off', es[0].isIntersecting); }, {threshold:0.15})
+      .observe(document.getElementById('apply'));
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-focus]'), function(a){ a.addEventListener('click', goForm); });
 
   function radio(name){ var c = form.querySelector('input[name="'+name+'"]:checked'); return c ? c.value : ''; }
   function showError(html){ formErr.innerHTML = html; formErr.classList.add('on'); }
@@ -294,12 +366,20 @@ footer p+p{margin-top:8px}
   function finish(data, real){
     document.getElementById('d-name').textContent = data.name;
     document.getElementById('d-phone').textContent = data.phone;
+    document.getElementById('d-size').textContent = data.size || '선택 안 함';
+    document.getElementById('d-purpose').textContent = data.purpose || '선택 안 함';
     document.getElementById('formBox').style.display = 'none';
     document.getElementById('done').classList.add('on');
 
-    /* 전환 측정: 이름·전화번호는 Meta로 보내지 않고, 신청 완료(Lead) 이벤트만 전송 */
+    /* 전환 측정: 이름·전화번호는 광고 플랫폼으로 보내지 않음 */
     if (real) {
-      try { if (window.fbq) window.fbq('track', 'Lead'); } catch(e){}
+      try {
+        var c = window.CFG || {};
+        if (typeof window.gtag === 'function' && c.AW_LEAD && c.AW_LEAD.indexOf('YYYY') < 0 && c.AW_ID.indexOf('X') < 0) {
+          window.gtag('event', 'conversion', { 'send_to': c.AW_LEAD });
+        }
+        if (window.fbq) window.fbq('track', 'Lead');
+      } catch(e){}
     }
     var t = document.getElementById('doneTitle');
     window.scrollTo(0, document.getElementById('apply').offsetTop - 10);
@@ -321,21 +401,21 @@ footer p+p{margin-top:8px}
     if (!agree.checked) { agreeErr.textContent = '개인정보 수집·이용에 동의해 주세요.'; first = first || agree; }
     if (first) { first.focus(); return; }
 
-    var data = { name: name, phone: phoneEl.value, size: '', purpose: '' };
+    var data = { name: name, phone: phoneEl.value, size: radio('size'), purpose: radio('purpose') };
 
     /* 스팸 봇이 숨은 칸을 채웠으면 전송·전환 기록 없이 완료 화면만 보여줌 */
     if (document.getElementById('company').value) { finish(data, false); return; }
 
     if (!ENDPOINT) {
-      showError('상담 접수 연결이 아직 완료되지 않았습니다. 죄송하지만 <a href="tel:16887038">1688-7038</a>로 전화 주세요.');
+      showError('상담 접수 연결이 아직 완료되지 않았습니다. 죄송하지만 <a href="tel:+8216887038">1688-7038</a>로 전화 주세요.');
       return;
     }
 
     var body = new URLSearchParams({
       name: data.name,
       phone: data.phone,
-      size: '-',
-      purpose: '분양가표·평면도 문자 요청',
+      size: data.size || '미선택',
+      purpose: data.purpose || '미선택',
       consent: '동의',
       utm_source: params.get('utm_source') || '',
       utm_medium: params.get('utm_medium') || '',
@@ -357,7 +437,7 @@ footer p+p{margin-top:8px}
         clearTimeout(timer);
         submitBtn.disabled = false;
         submitBtn.textContent = original;
-        showError('접수 중 문제가 생겼습니다. 잠시 후 다시 시도하시거나 <a href="tel:16887038">1688-7038</a>로 전화 주세요.');
+        showError('접수 중 문제가 생겼습니다. 잠시 후 다시 시도하시거나 <a href="tel:+8216887038">1688-7038</a>로 전화 주세요.');
       });
   });
 })();
